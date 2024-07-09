@@ -12,7 +12,10 @@ import com.example.kaiyanproject.R
 import com.example.kaiyanproject.databinding.ActivitySplashBinding
 import com.example.kaiyanproject.extension.resString
 import com.example.kaiyanproject.ui.common.ui.BaseActivity
+import com.example.kaiyanproject.util.DataStoreUtils
 import com.permissionx.guolindev.PermissionX
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -46,6 +49,7 @@ class SplashActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestWriteExternalStoragePermission()
     }
 
     override fun onDestroy() {
@@ -62,7 +66,7 @@ class SplashActivity : BaseActivity() {
             MainActivity.start(this@SplashActivity)
             finish()
         }
-        isf
+        isFirstEntryApp = false
     }
 
     private fun requestWriteExternalStoragePermission() {
@@ -75,8 +79,9 @@ class SplashActivity : BaseActivity() {
                 )
             } else {
                 listOf(
-                    Manifest.permission.READ_EXTERNAL_STORAGE,
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE
+                    Manifest.permission.READ_EXTERNAL_STORAGE
+//                    ,
+//                    Manifest.permission.WRITE_EXTERNAL_STORAGE
                 )
             }
         PermissionX.init(this@SplashActivity).permissions(permissions)
@@ -131,9 +136,14 @@ class SplashActivity : BaseActivity() {
 
     companion object {
         var isFirstEntryApp: Boolean
-            get() = field
+            get() = DataStoreUtils.readBooleanData("is_first_entry_app", true)
             set(value) {
-                field = value
+                CoroutineScope(Dispatchers.IO).launch {
+                    DataStoreUtils.saveBooleanData(
+                        "is_first_entry_app",
+                        value
+                    )
+                }
             }
     }
 }

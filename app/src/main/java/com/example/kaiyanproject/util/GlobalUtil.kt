@@ -1,10 +1,15 @@
 package com.example.kaiyanproject.util
 
 import android.annotation.SuppressLint
+import android.content.pm.ApplicationInfo
+import android.content.pm.PackageInfo
+import android.content.pm.PackageManager
+import android.graphics.drawable.Drawable
 import android.os.Build
 import android.provider.Settings
 import android.text.TextUtils
 import com.example.kaiyanproject.KaiYanApplication
+import com.example.kaiyanproject.extension.logW
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -27,14 +32,14 @@ object GlobalUtil {
      * @return 当前应用程序的名称。
      */
     val appName: String
-        get() = EyepetizerApplication.context.resources.getString(EyepetizerApplication.context.applicationInfo.labelRes)
+        get() = KaiYanApplication.context.resources.getString(KaiYanApplication.context.applicationInfo.labelRes)
 
     /**
      * 获取当前应用程序的版本名。
      * @return 当前应用程序的版本名。
      */
     val appVersionName: String
-        get() = EyepetizerApplication.context.packageManager.getPackageInfo(
+        get() = KaiYanApplication.context.packageManager.getPackageInfo(
             appPackage,
             0
         ).versionName
@@ -45,12 +50,12 @@ object GlobalUtil {
      */
     val appVersionCode: Long
         get() = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            EyepetizerApplication.context.packageManager.getPackageInfo(
+            KaiYanApplication.context.packageManager.getPackageInfo(
                 appPackage,
                 0
             ).longVersionCode
         } else {
-            EyepetizerApplication.context.packageManager.getPackageInfo(
+            KaiYanApplication.context.packageManager.getPackageInfo(
                 appPackage,
                 0
             ).versionCode.toLong()
@@ -111,7 +116,7 @@ object GlobalUtil {
             if ("google" != appChannel || "samsung" != appChannel) {
                 try {
                     deviceId = Settings.Secure.getString(
-                        EyepetizerApplication.context.contentResolver,
+                        KaiYanApplication.context.contentResolver,
                         Settings.Secure.ANDROID_ID
                     )
                 } catch (e: Exception) {
@@ -135,5 +140,77 @@ object GlobalUtil {
             return deviceSerial.toString()
         }
     }
+
+    /**
+     * 获取AndroidManifest.xml文件中，<application>标签下的meta-data值。
+     *
+     * @param key
+     *  <application>标签下的meta-data健
+     */
+    fun getApplicationMetaData(key: String): String? {
+        var applicationInfo: ApplicationInfo? = null
+        try {
+            applicationInfo = KaiYanApplication.context.packageManager.getApplicationInfo(
+                appPackage,
+                PackageManager.GET_META_DATA
+            )
+        } catch (e: PackageManager.NameNotFoundException) {
+            logW(TAG, e.message, e)
+        }
+        if (applicationInfo == null) return ""
+        return applicationInfo.metaData.getString(key)
+    }
+
+    /**
+     * 判断某个应用是否安装。
+     * @param packageName
+     * 要检查是否安装的应用包名
+     * @return 安装返回true，否则返回false。
+     */
+    fun isInstalled(packageName: String): Boolean {
+        val packageInfo: PackageInfo? = try {
+            KaiYanApplication.context.packageManager.getPackageInfo(packageName, 0)
+        } catch (e: PackageManager.NameNotFoundException) {
+            null
+        }
+        return packageInfo != null
+    }
+
+    /**
+     * 获取当前应用程序的图标。
+     */
+    fun getAppIcon(): Drawable {
+        val packageManager = KaiYanApplication.context.packageManager
+        val applicationInfo = packageManager.getApplicationInfo(appPackage, 0)
+        return packageManager.getApplicationIcon(applicationInfo)
+    }
+
+    /**
+     * 判断手机是否安装了QQ。
+     */
+    fun isQQInstalled() = isInstalled("com.tencent.mobileqq")
+
+    /**
+     * 判断手机是否安装了微信。
+     */
+    fun isWechatInstalled() = isInstalled("com.tencent.mm")
+
+    /**
+     * 判断手机是否安装了微博。
+     * */
+    fun isWeiboInstalled() = isInstalled("com.sina.weibo")
+
+
+    /**
+     * 获取指定资源名的资源id。
+     *
+     * @param name
+     * 资源名
+     * @param type
+     * 资源类型
+     * @return 指定资源名的资源id。
+     */
+    fun getResourceId(name: String, type: String): Int =
+        KaiYanApplication.context.resources.getIdentifier(name, type, appPackage)
 
 }
