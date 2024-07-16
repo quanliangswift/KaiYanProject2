@@ -13,6 +13,8 @@ constraintlayout = "2.1.4"
 datastoreCoreAndroid = "1.1.1"
 datastoreAndroid = "1.1.1"
 multidex = "1.0.3"
+pagingCommonAndroid = "3.3.0"
+pagingRuntimeKtx = "3.3.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -27,6 +29,8 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 androidx-datastore-core-android = { group = "androidx.datastore", name = "datastore-core-android", version.ref = "datastoreCoreAndroid" }
 androidx-datastore-android = { group = "androidx.datastore", name = "datastore-android", version.ref = "datastoreAndroid" }
 multidex = { module = "com.android.support:multidex", version.ref = "multidex" }
+androidx-paging-common-android = { group = "androidx.paging", name = "paging-common-android", version.ref = "pagingCommonAndroid" }
+androidx-paging-runtime-ktx = { group = "androidx.paging", name = "paging-runtime-ktx", version.ref = "pagingRuntimeKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

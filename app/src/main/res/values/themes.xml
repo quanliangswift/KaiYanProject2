@@ -1,9 +1,78 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.KaiYanProject" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="KaiYanProject" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.KaiYanProject" parent="Base.Theme.KaiYanProject" />
+    <style name="Theme.KaiYanProject" parent="KaiYanProject" />
+
+    <style name="KaiYanProject.SplashActivity">
+        <item name="android:windowBackground">@drawable/bg_splash_background</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="KaiYanProject.SettingRadioButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:textColor">@color/sel_setting_switch_text_color</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="typeface">fzlLTypeface</item>
+    </style>
+
+    <style name="KaiYanProject.SettingTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">45dp</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="typeface">fzlLTypeface</item>
+    </style>
+
+    <style name="Eyepetizer.MineTextView" parent="KaiYanProject.SettingTextView">
+        <item name="android:layout_height">25.5dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">45dp</item>
+    </style>
+
+    <style name="KaiYanProject.VideoDurationTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">3.5dp</item>
+        <item name="android:paddingTop">1dp</item>
+        <item name="android:paddingEnd">3.5dp</item>
+        <item name="android:paddingBottom">1dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:background">@drawable/shape_time_radius_black_2dp_bg</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="typeface">dinTypeface</item>
+    </style>
+
+    <style name="KaiYanProject.FollowTextView">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">22dp</item>
+        <item name="android:background">@drawable/shape_follow_radius_black_2dp_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/plus_follow</item>
+        <item name="android:textSize">10sp</item>
+        <item name="typeface">fzdb1Typeface</item>
+    </style>
+
+    <style name="KaiYanProjectAlertDialogStyle" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
 </resources>
