@@ -5,10 +5,13 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.example.kaiyanproject.Const
 import com.example.kaiyanproject.logic.dao.MainPageDao
+import com.example.kaiyanproject.logic.model.Daily
 import com.example.kaiyanproject.logic.model.HomePageRecommend
 import com.example.kaiyanproject.logic.model.PushMessage
 import com.example.kaiyanproject.logic.network.KaiYanNetwork
 import com.example.kaiyanproject.ui.home.commend.CommendPagingSource
+import com.example.kaiyanproject.ui.home.daily.DailyPagingSource
+import com.example.kaiyanproject.ui.home.discovery.DiscoveryPagingSource
 import com.example.kaiyanproject.ui.notification.push.PushPagingSource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -43,6 +46,24 @@ class MainPageRepository private constructor(
             config = PagingConfig(Const.Config.PAGE_SIZE),
             pagingSourceFactory = {
                 CommendPagingSource(kaiYanNetwork.mainPageService)
+            }
+        ).flow
+    }
+
+    fun getDailyPagingData(): Flow<PagingData<Daily.Item>> {
+        return Pager(
+            config = PagingConfig(Const.Config.PAGE_SIZE),
+            pagingSourceFactory = {
+                DailyPagingSource(kaiYanNetwork.mainPageService)
+            }
+        ).flow
+    }
+
+    fun getDiscoveryPagingData(): Flow<PagingData<Daily.Item>> {
+        return Pager(
+            config = PagingConfig(Const.Config.PAGE_SIZE),
+            pagingSourceFactory = {
+                DiscoveryPagingSource(kaiYanNetwork.mainPageService)
             }
         ).flow
     }

@@ -90,6 +90,10 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
-//    implementation 'com.shuyu:GSYVideoPlayer:8.6.0-release-jitpack'
     implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer:v8.6.0-release-jitpack'
+
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.9.0'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
 }
