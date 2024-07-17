@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.Flow
 class DiscoveryViewModel(val repository: MainPageRepository) : ViewModel() {
     var dataList = ArrayList<Discovery.Item>()
 
-    fun getPagingData(): Flow<PagingData<Daily.Item>> {
+    fun getPagingData(): Flow<PagingData<Discovery.Item>> {
         return repository.getDiscoveryPagingData().cachedIn(viewModelScope)
     }
 }

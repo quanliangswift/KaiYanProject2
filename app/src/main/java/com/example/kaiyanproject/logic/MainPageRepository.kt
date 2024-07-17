@@ -6,6 +6,7 @@ import androidx.paging.PagingData
 import com.example.kaiyanproject.Const
 import com.example.kaiyanproject.logic.dao.MainPageDao
 import com.example.kaiyanproject.logic.model.Daily
+import com.example.kaiyanproject.logic.model.Discovery
 import com.example.kaiyanproject.logic.model.HomePageRecommend
 import com.example.kaiyanproject.logic.model.PushMessage
 import com.example.kaiyanproject.logic.network.KaiYanNetwork
@@ -59,7 +60,7 @@ class MainPageRepository private constructor(
         ).flow
     }
 
-    fun getDiscoveryPagingData(): Flow<PagingData<Daily.Item>> {
+    fun getDiscoveryPagingData(): Flow<PagingData<Discovery.Item>> {
         return Pager(
             config = PagingConfig(Const.Config.PAGE_SIZE),
             pagingSourceFactory = {

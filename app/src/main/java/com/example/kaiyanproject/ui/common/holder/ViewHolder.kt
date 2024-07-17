@@ -283,7 +283,7 @@ object RecyclerViewHelp {
     fun getItemViewType(item: Discovery.Item): Int {
         return if (item.type == "textCard") getTextCardType(item.data.type) else getItemViewType(
             item.type,
-            item.data.type
+            item.data.dataType
         )
     }
 
