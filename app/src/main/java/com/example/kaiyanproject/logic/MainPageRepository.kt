@@ -5,11 +5,14 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.example.kaiyanproject.Const
 import com.example.kaiyanproject.logic.dao.MainPageDao
+import com.example.kaiyanproject.logic.model.CommunityRecommend
 import com.example.kaiyanproject.logic.model.Daily
 import com.example.kaiyanproject.logic.model.Discovery
+import com.example.kaiyanproject.logic.model.Follow
 import com.example.kaiyanproject.logic.model.HomePageRecommend
 import com.example.kaiyanproject.logic.model.PushMessage
 import com.example.kaiyanproject.logic.network.KaiYanNetwork
+import com.example.kaiyanproject.ui.community.follow.FollowPagingSource
 import com.example.kaiyanproject.ui.home.commend.CommendPagingSource
 import com.example.kaiyanproject.ui.home.daily.DailyPagingSource
 import com.example.kaiyanproject.ui.home.discovery.DiscoveryPagingSource
@@ -65,6 +68,24 @@ class MainPageRepository private constructor(
             config = PagingConfig(Const.Config.PAGE_SIZE),
             pagingSourceFactory = {
                 DiscoveryPagingSource(kaiYanNetwork.mainPageService)
+            }
+        ).flow
+    }
+
+    fun getCommunityCommendPagingData(): Flow<PagingData<CommunityRecommend.Item>> {
+        return Pager(
+            config = PagingConfig(Const.Config.PAGE_SIZE),
+            pagingSourceFactory = {
+                com.example.kaiyanproject.ui.community.commend.CommendPagingSource(kaiYanNetwork.mainPageService)
+            }
+        ).flow
+    }
+
+    fun getFollowPagingData(): Flow<PagingData<Follow.Item>> {
+        return Pager(
+            config = PagingConfig(Const.Config.PAGE_SIZE),
+            pagingSourceFactory = {
+                FollowPagingSource(kaiYanNetwork.mainPageService)
             }
         ).flow
     }

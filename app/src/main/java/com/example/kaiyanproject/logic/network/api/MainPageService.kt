@@ -1,5 +1,6 @@
 package com.example.kaiyanproject.logic.network.api
 
+import com.example.kaiyanproject.logic.model.CommunityRecommend
 import com.example.kaiyanproject.logic.model.Daily
 import com.example.kaiyanproject.logic.model.Discovery
 import com.example.kaiyanproject.logic.model.Follow
@@ -22,6 +23,12 @@ interface MainPageService {
 
     @GET
     suspend fun getHomePageRecommend(@Url url: String): HomePageRecommend
+
+    /**
+     * 社区-推荐列表
+     */
+    @GET
+    suspend fun getCommunityRecommend(@Url url: String): CommunityRecommend
 
     @GET
     suspend fun getDaily(@Url url: String): Daily
