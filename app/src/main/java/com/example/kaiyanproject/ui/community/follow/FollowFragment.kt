@@ -16,6 +16,7 @@ import com.example.kaiyanproject.extension.gone
 import com.example.kaiyanproject.extension.resString
 import com.example.kaiyanproject.extension.showToast
 import com.example.kaiyanproject.extension.visible
+import com.example.kaiyanproject.ui.common.callback.AutoPlayScrollListener
 import com.example.kaiyanproject.ui.common.ui.BaseFragment
 import com.example.kaiyanproject.ui.common.ui.FooterAdapter
 import com.example.kaiyanproject.util.InjectorUtil
