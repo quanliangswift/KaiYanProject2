@@ -4,16 +4,11 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import com.example.kaiyanproject.databinding.ActivityMainBinding
-import com.example.kaiyanproject.databinding.ActivitySplashBinding
 import com.example.kaiyanproject.event.MessageEvent
 import com.example.kaiyanproject.event.RefreshEvent
 import com.example.kaiyanproject.event.SwitchPagesEvent

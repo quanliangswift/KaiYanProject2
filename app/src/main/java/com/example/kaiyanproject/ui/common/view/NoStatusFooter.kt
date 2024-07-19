@@ -1,8 +1,7 @@
-package com.example.kaiyanproject.ui.view
+package com.example.kaiyanproject.ui.common.view
 
 import android.content.Context
 import android.util.AttributeSet
-import android.util.Size
 import android.util.TypedValue
 import android.view.View
 import android.widget.TextView

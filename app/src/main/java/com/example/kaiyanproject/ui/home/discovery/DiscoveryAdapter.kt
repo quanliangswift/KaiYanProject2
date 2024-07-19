@@ -18,7 +18,7 @@ import com.example.kaiyanproject.extension.dp2px
 import com.example.kaiyanproject.extension.gone
 import com.example.kaiyanproject.extension.invisible
 import com.example.kaiyanproject.extension.load
-import com.example.kaiyanproject.extension.resDimension
+import com.example.kaiyanproject.extension.resDimensionPixelOffset
 import com.example.kaiyanproject.extension.resString
 import com.example.kaiyanproject.extension.setOnClickListener
 import com.example.kaiyanproject.extension.showDialogShare
@@ -166,7 +166,7 @@ class DiscoveryAdapter(val fragment: DiscoveryFragment) :
                 holder.bannerViewPager.run {
                     setCanLoop(false)
                     setRoundCorner(4f.dp2px)
-                    setRevealWidth(R.dimen.listSpaceSize.resDimension)
+                    setRevealWidth(R.dimen.listSpaceSize.resDimensionPixelOffset)
                     if (item.data.itemList.size == 1) setPageMargin(0) else setPageMargin(4f.dp2px)
                     setIndicatorVisibility(View.GONE)
                     setAdapter(HorizontalScrollCardAdapter())

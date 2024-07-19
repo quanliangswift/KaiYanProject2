@@ -8,7 +8,7 @@
     android:paddingHorizontal="@dimen/listSpaceSize"
     tools:context=".ui.home.discovery.DiscoveryFragment">
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="53dp"
@@ -18,7 +18,7 @@
         app:typeface="fzdb1Typeface"
         tools:text="专题策划" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvRightText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -27,6 +27,7 @@ import org.greenrobot.eventbus.ThreadMode
 import java.lang.ref.WeakReference
 
 open class BaseActivity : AppCompatActivity() {
+
     protected var isActive: Boolean = false
 
     protected var activity: Activity? = null

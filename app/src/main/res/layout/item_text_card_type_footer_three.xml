@@ -21,7 +21,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="11dp">
 
-        <com.example.kaiyanproject.ui.view.TypefaceTextView
+        <com.example.kaiyanproject.ui.common.view.TypefaceTextView
             android:id="@+id/tvRefresh"
             android:layout_width="wrap_content"
             android:layout_height="34dp"
@@ -36,7 +36,7 @@
 
     </FrameLayout>
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvFooterRightText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

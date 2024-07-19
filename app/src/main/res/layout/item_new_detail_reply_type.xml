@@ -18,7 +18,7 @@
         app:civ_border_width="1dp"
         app:civ_circle_background_color="@color/white" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
         app:typeface="fzdb1Typeface"
         tools:text="今天最值得关注的5件全球新鲜事" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
         app:typeface="fzlLTypeface"
         tools:text="14:50" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

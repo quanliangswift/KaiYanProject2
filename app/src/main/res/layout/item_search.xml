@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:paddingStart="@dimen/listSpaceSize">
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvKeywords"
         android:layout_width="wrap_content"
         android:layout_height="0dp"

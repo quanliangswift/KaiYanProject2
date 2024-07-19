@@ -8,7 +8,7 @@
     tools:background="@color/blackAlpha50"
     tools:visibility="visible">
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvTitle7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,7 +17,7 @@
         app:typeface="fzdb1Typeface"
         tools:text="开眼专栏" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvRightText7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

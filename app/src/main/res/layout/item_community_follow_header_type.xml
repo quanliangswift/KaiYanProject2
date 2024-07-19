@@ -18,7 +18,7 @@
             android:layout_marginTop="52dp"
             android:src="@drawable/ic_avatar_gray_76dp" />
 
-        <com.example.kaiyanproject.ui.view.TypefaceTextView
+        <com.example.kaiyanproject.ui.common.view.TypefaceTextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

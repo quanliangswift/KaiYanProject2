@@ -9,6 +9,7 @@ import android.view.animation.ScaleAnimation
 import androidx.lifecycle.lifecycleScope
 import com.example.kaiyanproject.MainActivity
 import com.example.kaiyanproject.R
+import com.example.kaiyanproject.databinding.ActivityLoginBinding
 import com.example.kaiyanproject.databinding.ActivitySplashBinding
 import com.example.kaiyanproject.extension.resString
 import com.example.kaiyanproject.ui.common.ui.BaseActivity

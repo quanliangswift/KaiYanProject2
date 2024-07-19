@@ -16,7 +16,7 @@ import com.example.kaiyanproject.databinding.FragmentRefreshLayoutBinding
 import com.example.kaiyanproject.event.MessageEvent
 import com.example.kaiyanproject.event.RefreshEvent
 import com.example.kaiyanproject.extension.dp2px
-import com.example.kaiyanproject.extension.resDimension
+import com.example.kaiyanproject.extension.resDimensionPixelOffset
 import com.example.kaiyanproject.extension.resString
 import com.example.kaiyanproject.extension.showToast
 import com.example.kaiyanproject.ui.common.ui.BaseFragment
@@ -35,7 +35,7 @@ class CommendFragment : BaseFragment() {
     /**
      * 列表左or右间距
      */
-    val bothSideSpace = R.dimen.listSpaceSize.resDimension
+    val bothSideSpace = R.dimen.listSpaceSize.resDimensionPixelOffset
 
     /**
      * 列表中间内间距，左or右。

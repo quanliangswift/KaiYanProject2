@@ -29,7 +29,7 @@ import com.example.kaiyanproject.extension.inflate
 import com.example.kaiyanproject.extension.invisible
 import com.example.kaiyanproject.extension.load
 import com.example.kaiyanproject.extension.logW
-import com.example.kaiyanproject.extension.resDimension
+import com.example.kaiyanproject.extension.resDimensionPixelOffset
 import com.example.kaiyanproject.extension.resString
 import com.example.kaiyanproject.extension.setOnClickListener
 import com.example.kaiyanproject.extension.showDialogShare
@@ -144,7 +144,7 @@ class CommendAdapter(val fragment: CommendFragment) :
                 holder.bannerViewPager.run {
                     setCanLoop(true)
                     setRoundCorner(4f.dp2px)
-                    setRevealWidth(0, R.dimen.listSpaceSize.resDimension)
+                    setRevealWidth(0, R.dimen.listSpaceSize.resDimensionPixelOffset)
                     if (item.data.itemList.size == 1) setPageMargin(0) else setPageMargin(4f.dp2px)
                     setIndicatorVisibility(View.GONE)
                     removeDefaultPageTransformer()

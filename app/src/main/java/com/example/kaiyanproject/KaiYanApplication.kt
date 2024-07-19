@@ -7,7 +7,7 @@ import androidx.multidex.MultiDex
 import androidx.work.WorkManager
 import com.example.kaiyanproject.extension.resString
 import com.example.kaiyanproject.ui.SplashActivity
-import com.example.kaiyanproject.ui.view.NoStatusFooter
+import com.example.kaiyanproject.ui.common.view.NoStatusFooter
 import com.example.kaiyanproject.util.DialogAppraiseTipsWorker
 import com.scwang.smart.refresh.header.MaterialHeader
 import com.scwang.smart.refresh.layout.SmartRefreshLayout

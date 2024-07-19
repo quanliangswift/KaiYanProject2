@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:context=".ui.home.discovery.DiscoveryFragment">
 
-        <com.example.kaiyanproject.ui.view.TypefaceTextView
+        <com.example.kaiyanproject.ui.common.view.TypefaceTextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="49dp"
@@ -29,7 +29,7 @@
             app:typeface="fzdb1Typeface"
             tools:text="社区精选" />
 
-        <com.example.kaiyanproject.ui.view.TypefaceTextView
+        <com.example.kaiyanproject.ui.common.view.TypefaceTextView
             android:id="@+id/tvRightText"
             android:layout_width="wrap_content"
             android:layout_height="38dp"
@@ -90,7 +90,7 @@
         app:layout_constraintEnd_toStartOf="@id/tvNicknameLeft"
         tools:src="@drawable/ic_avatar_gray_76dp" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvNicknameLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -143,7 +143,7 @@
         app:layout_constraintEnd_toStartOf="@id/tvNicknameRightTop"
         tools:src="@drawable/ic_avatar_gray_76dp" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvNicknameRightTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -197,7 +197,7 @@
         app:layout_constraintEnd_toStartOf="@id/tvNicknameRightBottom"
         tools:src="@drawable/ic_avatar_gray_76dp" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvNicknameRightBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

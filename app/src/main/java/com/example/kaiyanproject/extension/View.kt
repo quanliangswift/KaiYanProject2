@@ -1,7 +1,9 @@
 package com.example.kaiyanproject.extension
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.AlphaAnimation
+import androidx.viewbinding.ViewBinding
 
 /**
  * 显示view

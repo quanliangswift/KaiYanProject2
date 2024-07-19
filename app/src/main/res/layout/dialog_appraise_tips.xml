@@ -7,7 +7,7 @@
     android:background="@drawable/shape_dialog_radius_white_6dp_bg"
     android:orientation="vertical">
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -17,7 +17,7 @@
         android:textSize="12sp"
         app:typeface="fzlLTypeface" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvEncourageMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
         android:layout_height="50dp"
         android:orientation="horizontal">
 
-        <com.example.kaiyanproject.ui.view.TypefaceTextView
+        <com.example.kaiyanproject.ui.common.view.TypefaceTextView
             android:id="@+id/tvPositiveButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -62,7 +62,7 @@
             android:layout_marginVertical="10dp"
             android:background="#a0a0a0" />
 
-        <com.example.kaiyanproject.ui.view.TypefaceTextView
+        <com.example.kaiyanproject.ui.common.view.TypefaceTextView
             android:id="@+id/tvNegativeButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"

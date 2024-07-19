@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.example.kaiyanproject.ui.view.TypefaceTextView
+        <com.example.kaiyanproject.ui.common.view.TypefaceTextView
             android:id="@+id/tvTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
             app:typeface="fzdb1Typeface"
             tools:text="2020年度游戏大作混剪" />
 
-        <com.example.kaiyanproject.ui.view.TypefaceTextView
+        <com.example.kaiyanproject.ui.common.view.TypefaceTextView
             android:id="@+id/tvCategory"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/tvTitle" />
 
-        <com.example.kaiyanproject.ui.view.TypefaceTextView
+        <com.example.kaiyanproject.ui.common.view.TypefaceTextView
             android:id="@+id/tvDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
                 android:layout_height="20dp"
                 android:src="@drawable/ic_favorite_border_white_20dp" />
 
-            <com.example.kaiyanproject.ui.view.TypefaceTextView
+            <com.example.kaiyanproject.ui.common.view.TypefaceTextView
                 android:id="@+id/tvCollectionCount"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -105,7 +105,7 @@
                 android:layout_height="20dp"
                 android:src="@drawable/ic_share_white_20dp" />
 
-            <com.example.kaiyanproject.ui.view.TypefaceTextView
+            <com.example.kaiyanproject.ui.common.view.TypefaceTextView
                 android:id="@+id/tvShareCount"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -124,7 +124,7 @@
                 android:layout_height="20dp"
                 android:src="@drawable/ic_cache_white_20dp" />
 
-            <com.example.kaiyanproject.ui.view.TypefaceTextView
+            <com.example.kaiyanproject.ui.common.view.TypefaceTextView
                 android:id="@+id/tvCache"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -143,7 +143,7 @@
                 android:layout_height="20dp"
                 android:src="@drawable/ic_star_white_20dp" />
 
-            <com.example.kaiyanproject.ui.view.TypefaceTextView
+            <com.example.kaiyanproject.ui.common.view.TypefaceTextView
                 android:id="@+id/tvFavorites"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -184,7 +184,7 @@
         app:layout_constraintBottom_toBottomOf="@id/ivAvatar"
         app:layout_constraintEnd_toEndOf="@id/ivAvatar" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvAuthorDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -200,7 +200,7 @@
         app:typeface="fzlLTypeface"
         tools:text="自由剪辑师/合作请联系…" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvAuthorName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -215,7 +215,7 @@
         app:typeface="fzdb1Typeface"
         tools:text="广告裁判" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvFollow"
         style="@style/KaiYanProject.FollowTextView"
         android:layout_marginEnd="13dp"

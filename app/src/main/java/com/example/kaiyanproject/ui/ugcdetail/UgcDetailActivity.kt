@@ -2,6 +2,7 @@ package com.example.kaiyanproject.ui.ugcdetail
 
 import android.content.Context
 import android.content.Intent
+import com.example.kaiyanproject.databinding.ActivityMainBinding
 import com.example.kaiyanproject.logic.model.CommunityRecommend
 import com.example.kaiyanproject.ui.common.ui.BaseActivity
 

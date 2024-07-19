@@ -22,7 +22,7 @@ import com.example.kaiyanproject.extension.inflate
 import com.example.kaiyanproject.extension.invisible
 import com.example.kaiyanproject.extension.load
 import com.example.kaiyanproject.extension.logW
-import com.example.kaiyanproject.extension.resDimension
+import com.example.kaiyanproject.extension.resDimensionPixelOffset
 import com.example.kaiyanproject.extension.resString
 import com.example.kaiyanproject.extension.setOnClickListener
 import com.example.kaiyanproject.extension.showDialogShare

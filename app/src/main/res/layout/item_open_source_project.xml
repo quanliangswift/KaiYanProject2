@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/ic_avatar_gray_76dp" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvNickName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
         app:typeface="fzdb1Typeface"
         tools:text="又新" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvLikeCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvReplyUser"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
         app:typeface="fzlLTypeface"
         tools:text="回复 @亮亮" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvMessage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -108,7 +108,7 @@
         app:layout_constraintTop_toTopOf="@+id/groupReply"
         tools:src="@drawable/ic_avatar_gray_76dp" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvReplyNickName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -125,7 +125,7 @@
         app:typeface="fzdb1Typeface"
         tools:text="亮亮" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvReplyMessage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -146,7 +146,7 @@
         app:layout_constraintStart_toStartOf="@+id/groupReply"
         app:layout_constraintTop_toBottomOf="@+id/tvReplyMessage" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvShowConversation"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -159,7 +159,7 @@
         app:layout_constraintTop_toTopOf="@+id/tvReply"
         app:typeface="fzlLTypeface" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvReply"
         android:layout_width="wrap_content"
         android:layout_height="22dp"
@@ -175,7 +175,7 @@
         app:layout_goneMarginTop="6dp"
         app:typeface="fzlLTypeface" />
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvTime"
         android:layout_width="wrap_content"
         android:layout_height="0dp"

@@ -8,7 +8,7 @@
     tools:background="@color/blackAlpha50"
     tools:visibility="visible">
 
-    <com.example.kaiyanproject.ui.view.TypefaceTextView
+    <com.example.kaiyanproject.ui.common.view.TypefaceTextView
         android:id="@+id/tvTitle5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         android:layout_alignBottom="@+id/tvTitle5"
         android:layout_alignParentEnd="true">
 
-        <com.example.kaiyanproject.ui.view.TypefaceTextView
+        <com.example.kaiyanproject.ui.common.view.TypefaceTextView
             android:id="@+id/tvFollow"
             style="@style/KaiYanProject.FollowTextView"
             android:visibility="gone"

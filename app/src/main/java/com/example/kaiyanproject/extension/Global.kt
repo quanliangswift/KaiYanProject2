@@ -33,8 +33,10 @@ fun showDialogShare(activity: Activity, shareContent: String) {
 val Int.resString
     get() = KaiYanApplication.context.resources.getString(this)
 
-val Int.resDimension
+val Int.resDimensionPixelOffset
     get() = KaiYanApplication.context.resources.getDimensionPixelOffset(this)
+val Int.resDimensionPixelSize
+    get() = KaiYanApplication.context.resources.getDimensionPixelSize(this)
 
 fun setOnClickListener(vararg v: View?, block: View.() -> Unit) {
     val listener = View.OnClickListener { it.block() }
