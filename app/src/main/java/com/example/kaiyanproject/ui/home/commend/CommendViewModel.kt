@@ -1,7 +1,9 @@
 package com.example.kaiyanproject.ui.home.commend
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
+import androidx.paging.cachedIn
 import com.example.kaiyanproject.logic.MainPageRepository
 import com.example.kaiyanproject.logic.model.HomePageRecommend
 import com.example.kaiyanproject.logic.network.api.MainPageService
@@ -11,6 +13,6 @@ class CommendViewModel(val repository: MainPageRepository) : ViewModel() {
     var dataList = ArrayList<HomePageRecommend.Item>()
 
     fun getPagingData(): Flow<PagingData<HomePageRecommend.Item>> {
-        return repository.getHomePageRecommendPagingData()
+        return repository.getHomePageRecommendPagingData().cachedIn(viewModelScope)
     }
 }

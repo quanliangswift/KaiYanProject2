@@ -8,7 +8,7 @@
     tools:context=".ui.newdetail.NewDetailVideoPlayer">
 
     <FrameLayout
-        android:id="@+id/sureface_container"
+        android:id="@+id/surface_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center" />
@@ -94,6 +94,16 @@
         android:layout_marginTop="6dp"
         android:visibility="gone"
         tools:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorAccent"
+        android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/start"

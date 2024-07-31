@@ -101,11 +101,12 @@ open class BaseActivity : AppCompatActivity() {
     override fun setContentView(layoutResID: Int) {
         super.setContentView(layoutResID)
         setStatusBarBackground(R.color.colorPrimaryDark)
-//        set
+        setupViews()
     }
 
     override fun setContentView(view: View?) {
         super.setContentView(view)
+        setStatusBarBackground(R.color.colorPrimaryDark)
         setupViews()
     }
 

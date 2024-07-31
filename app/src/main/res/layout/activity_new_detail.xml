@@ -187,14 +187,14 @@
             android:src="@drawable/ic_account_login_weibo" />
 
         <ImageView
-            android:id="@+id/ivToQQ"
+            android:id="@+id/ivShareToQQ"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:padding="7dp"
             android:src="@drawable/ic_share_qq_white_30dp" />
 
         <ImageView
-            android:id="@+id/ivToQQzone"
+            android:id="@+id/ivShareToQQzone"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:padding="7dp"

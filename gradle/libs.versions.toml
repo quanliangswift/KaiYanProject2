@@ -2,7 +2,6 @@
 agp = "8.4.0"
 eventbus = "3.1.1"
 kotlin = "1.9.0"
-coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -17,7 +16,6 @@ pagingCommonAndroid = "3.3.0"
 pagingRuntimeKtx = "3.3.0"
 
 [libraries]
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 eventbus = { module = "org.greenrobot:eventbus", version.ref = "eventbus" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }

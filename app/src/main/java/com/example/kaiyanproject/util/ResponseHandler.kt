@@ -10,7 +10,7 @@ import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 
 object ResponseHandler {
-    fun getFailureTips(e: Throwable) = when (e) {
+    fun getFailureTips(e: Throwable?) = when (e) {
         is ConnectException -> R.string.network_connect_error.resString
         is SocketTimeoutException -> R.string.network_connect_timeout.resString
         is ResponseCodeException -> R.string.network_response_code_error.resString + e.responseCode

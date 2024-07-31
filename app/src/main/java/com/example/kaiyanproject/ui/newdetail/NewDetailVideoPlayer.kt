@@ -7,14 +7,18 @@ import com.example.kaiyanproject.R
 import com.example.kaiyanproject.extension.gone
 import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
 import com.shuyu.gsyvideoplayer.video.base.GSYVideoPlayer
+import com.shuyu.gsyvideoplayer.video.base.GSYVideoView
+
 
 class NewDetailVideoPlayer : StandardGSYVideoPlayer {
+
     /**
      *  是否第一次加载视频。用于隐藏进度条、播放按钮等UI。播放完成后，重新加载视频，会重置为true。
      */
     private var initFirstLoad = true
 
     constructor(context: Context) : super(context)
+
     constructor(context: Context, fullFlag: Boolean?) : super(context, fullFlag)
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
@@ -25,20 +29,19 @@ class NewDetailVideoPlayer : StandardGSYVideoPlayer {
         if (mStartButton is ImageView) {
             val imageView = mStartButton as ImageView
             when (mCurrentState) {
-                GSYVideoPlayer.CURRENT_STATE_PLAYING -> {
+                GSYVideoView.CURRENT_STATE_PLAYING -> {
                     imageView.setImageResource(R.drawable.ic_pause_white_24dp)
                     imageView.setBackgroundResource(R.drawable.sel_pause_white_bg)
                 }
 
-                GSYVideoPlayer.CURRENT_STATE_ERROR -> {
-                    imageView.setImageResource(R.drawable.ic_pause_white_24dp)
+                GSYVideoView.CURRENT_STATE_ERROR -> {
+                    imageView.setImageResource(R.drawable.ic_play_white_24dp)
                     imageView.setBackgroundResource(R.drawable.sel_play_white_bg)
                 }
 
-                GSYVideoPlayer.CURRENT_STATE_AUTO_COMPLETE -> {
+                GSYVideoView.CURRENT_STATE_AUTO_COMPLETE -> {
                     imageView.setImageResource(R.drawable.ic_refresh_white_24dp)
                     imageView.setBackgroundResource(0)
-
                 }
 
                 else -> {
@@ -46,6 +49,7 @@ class NewDetailVideoPlayer : StandardGSYVideoPlayer {
                     imageView.setBackgroundResource(R.drawable.sel_play_white_bg)
                 }
             }
+
         } else {
             super.updateStartImage()
         }

@@ -4,7 +4,7 @@ data class HomePageRecommend(
     val itemList: List<Item>,
     val count: Int,
     val total: Int,
-    val nextPageUrl: String,
+    val nextPageUrl: String?,
     val adExist: Boolean
 ) : Model() {
     data class Item(

@@ -116,10 +116,12 @@ open class BaseFragment : Fragment(), RequestLifecycle {
         hideLoadErrorView()
     }
 
+    @CallSuper
     override fun loadFinished() {
         loading?.visibility = View.GONE
     }
 
+    @CallSuper
     override fun loadFailed(msg: String?) {
         loading?.visibility = View.GONE
     }
